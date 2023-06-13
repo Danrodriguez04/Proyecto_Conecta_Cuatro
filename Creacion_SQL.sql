@@ -12,7 +12,7 @@ create table paisEn2(
 
 );
 
-/*Insert pais*/
+	/*Insert pais*/
 
 delimiter $$
 create procedure insertarPaisesIdiomaIngles(
@@ -134,13 +134,6 @@ end $$
 
 delimiter ;
 
-call crearUsuarios();
-
-load data infile 'C:/FotoPerfil.csv'
-into table foto_perfil
-fields terminated by ","
-lines terminated by "\r\n";
-
 /*Insertar colores*/
 
 create table colores(
@@ -148,10 +141,6 @@ create table colores(
     colorIngles varchar(30)
 );
 
-load data infile 'C:/colores.csv' 
-into table colores
-fields terminated by ","
-lines terminated by "\r\n";
 
 delimiter $$
 create procedure insertarColoresTraduccion(
@@ -185,7 +174,6 @@ begin
 end $$
 delimiter ;
 
-call insertarColoresTraduccion();
 
 /* Insertar partida */
 
@@ -208,8 +196,6 @@ begin
     
 end $$
 delimiter ;
-
-call crearPartida();
 
 
 /* Asignar jugadores y movimientos a partida */
@@ -310,7 +296,6 @@ end $$
 
 delimiter ;
 
-call crearComentarios();
 
 
 
@@ -367,7 +352,6 @@ end $$
 
 delimiter ;
 
-call añadirPuntuacion();
 
 /**/
 
@@ -386,7 +370,6 @@ end $$
 
 delimiter ;
 
-call asignarTorneosPartida();
 
 
 /*Triggers sobre torneo*/

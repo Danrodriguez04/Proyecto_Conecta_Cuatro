@@ -1,4 +1,4 @@
-/*Insert idioma*/
+	/*Insert idioma*/
 insert into idioma (nombre) values ("Español");
 insert into idioma (nombre) values ("English");
 
@@ -15,3 +15,38 @@ call insertarPaisesIdiomaIngles();
 call insertarCiudades();
 
 call insertarCiudadTraduccionIngles();
+
+call crearUsuarios();
+
+
+load data infile 'C:/FotoPerfil.csv'
+into table foto_perfil
+fields terminated by ","
+lines terminated by "\r\n";
+
+
+load data infile 'C:/colores.csv' 
+into table colores
+fields terminated by ","
+lines terminated by "\r\n";
+
+call insertarColoresTraduccion();
+
+call crearPartida();
+
+call crearComentarios();
+
+call añadirPuntuacion();
+
+call asignarTorneosPartida();
+
+
+
+
+
+
+
+
+
+
+

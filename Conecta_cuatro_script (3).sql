@@ -6,8 +6,6 @@ create table Pais(
 id int (11) auto_increment primary key 
 );
 
-show tables;
-
 create table Ciudad (
 id int (11) auto_increment primary key,
 id_pais int (11) not null,
@@ -108,8 +106,6 @@ constraint chk_partida check (fecha_final > fecha_inicio),
 constraint fk_Partida_torneo foreign key (id_torneo) references Torneo(id),
 constraint fk_Partida_usuario foreign key (id_juez) references Usuario(id)
 );
-describe Partida;
-
 
 create table Comentario_Partida (
 fecha datetime,
@@ -133,9 +129,6 @@ constraint fk_Juego_usuario foreign key (id_usuario) references Usuario(id),
 constraint fk_Juego_partida foreign key (id_partida) references Partida(id),
 constraint fk_Juego_color foreign key (id_color) references Color(id)
 );
-describe Juego;
-show create table Juego;
-
 
 create table Movimiento (
 id int auto_increment primary key,
