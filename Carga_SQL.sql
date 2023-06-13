@@ -5,7 +5,6 @@
     ejm:    source /Users/usuario/estructuraToneos.sql
 */
 
-
 	/*Insert idioma*/
 insert into idioma (nombre) values ("Español");
 insert into idioma (nombre) values ("English");
