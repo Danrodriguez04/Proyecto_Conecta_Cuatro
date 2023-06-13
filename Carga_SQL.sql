@@ -1,3 +1,11 @@
+
+/*Antes de ejecutar este script haremos un source desde la terminal del mysql 
+ de estructuraToneos.sql para hacer los inserts de los torneos
+	
+    ejm:    source /Users/usuario/estructuraToneos.sql
+*/
+
+
 	/*Insert idioma*/
 insert into idioma (nombre) values ("Español");
 insert into idioma (nombre) values ("English");
