@@ -96,7 +96,6 @@ where id_usuario != (select  distinct j2.id_usuario from juego as j2,usuario, ci
 					 and traduccion_pais.nombre = "Spain")
 ;
 
-
 /* Muestra usuarios de un pais en concreto.
 select  usuario.id from usuario, ciudad,pais,traduccion_pais
 where usuario.id_ciudad = ciudad.id
